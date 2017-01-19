@@ -1,0 +1,183 @@
+ html, body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+        }
+        
+        #upperbar {
+            padding-top:10%;
+            background: #005a8c;
+            width: 100%;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            padding-left: auto;
+            padding-right: auto;
+            font-size:24px;
+            height: 150px
+        }
+
+        .tagline {
+            font-size:14px;
+            padding-left:6px;
+            padding-right:6px;
+            line-height: 20px;
+        }
+
+        #middle {
+            background: #efeff2;
+            display: flex;
+            flex-wrap:wrap;
+            width: 100%;
+        }
+        
+        .first {
+            background: white;
+            height: 970px;
+            width: 94%;
+            margin: auto;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .first {width: 46%;}
+            #upperbar {font-size:34px;
+                       width:100%;
+                       padding-top:5%;
+                       height:120px}
+        }
+
+        @media screen and (min-width: 1024px) {
+            #upperbar {font-size: 45px;
+                       padding-top:5%;
+                       height:140px}
+            .tagline{font-size:22px}
+        }
+
+        @media screen and (min-width: 1280px) {
+            .first {width: 23%;}
+            #upperbar {font-size: 45px;
+                       padding-top:4%;
+                       height:150px}
+            .tagline{font-size:22px}
+        }
+
+        @media screen and (min-width: 1430px) {
+            .first {width: 23%;}
+            #upperbar {font-size: 60px;
+                       padding-top:3%;
+                       padding-bottom:2%}
+            .tagline{font-size:29px}
+        }
+
+        @media screen and (min-width: 2200px) {
+            #middle {
+            width: 2200px;
+            margin-left:auto;
+            margin-right:auto;
+            }
+        }
+        
+        
+        .A {
+            background: #005a8c;
+            height: 70px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            line-height: 70px;
+            vertical-align: middle;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            font-size: 20px
+        }
+        
+        .B {
+            height: 90px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        .C {
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            border-bottom: 2px solid #efeff2;
+            font-size: 15px;
+        }
+        
+        .columns {
+            width: 33.33%;
+            padding-top: 20px;
+            align-content: center;
+        }
+        
+        .box {
+            line-height: 30px;
+            font-size: 15px;
+            width: 70%;
+            padding: 0;
+            border-radius: 3px;
+            border: 2px;
+            background: #efeff2;
+            margin-top: 5px;
+            padding-left: 5px;
+            margin-top: 7.5px;
+            font-weight: lighter;
+            text-align: center;
+        }
+        
+        input[type="number"], input[type="text"] {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        input[type='radio'] {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 1px solid darkgray;
+            border-radius: 50%;
+            outline: none;
+            box-shadow: 0 0 5px 0px gray inset;
+        }
+        
+        input[type='radio']:hover {
+            box-shadow: 0 0 5px 0px #005a8c;
+        }
+        
+        input[type='radio']:before {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 60%;
+            margin: 20% auto;
+            border-radius: 50%;
+        }
+        
+        input[type='radio']:checked:before {
+            background: #005a8c;
+        }
+        
+        .drop {
+            width: 130px;
+            height: 38px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .foot {
+            background-color: #005a8c;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            vertical-align: middle;
+            color: white;
+            font-size:12px
+        }
+
+        a.one:link {color:#ffcc00;text-decoration:none;}
+        a.one:visited {color:#ffcc00;text-decoration:none;}
+        a.one:hover {color:#ffcc00;text-decoration:underline;}

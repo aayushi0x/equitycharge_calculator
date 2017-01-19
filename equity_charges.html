@@ -1,0 +1,201 @@
+<!-- Add the fevicon -->
+
+<!-- Hey! I'm Sowmay Jain, the designer and coder of this webpage. We can get in touch here: hey@sowmayjain.com -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head Starts (Meta and CSS) -->
+
+<head>
+    <title>Equity Charges</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="equity_charges.css" />
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+</head>
+<!-- BODY Starts (Javascript, body and jQuery)-->
+
+<body>
+    
+    <!-- upperbar start -->
+    <div id="ub">
+    <div id="upperbar">EQUITY CHARGES & CALCULATOR<br>
+    <p class="tagline">How Much Are You Charged On Every Equity Transaction?</p>
+    </div>
+    </div>
+    <!-- upperbar end-->
+    
+    <!-- middle content starts -->
+    <div id="middle">
+
+        <!-- - - - - - - - - - - - - - - First  - - - - - - - - - - - - - - - - - - -->
+        <div class="first">
+            <div class="A">
+                <select onChange="equity();" style="padding-right:30px; width:60%" id='equity' class="box drop" name="test">
+                <option selected>Intraday Equity</option>
+                <option>Interday Equity</option>
+                <option>Future Equity</option>
+                <option>Option Equity</option>
+                    </select>
+            </div>
+            <div class="B">
+                <div class="columns">
+                    <center>
+                        <label>Buy (<span style='font-family:Arial;'>&#8377;</span>)</label><br>
+                        <input onChange="equity();" id="intra_buy" class="box" type="number" min="0" name="intra_buy" value="500">
+                    </center>
+                </div>
+                <div class="columns">
+                    <center>
+                        <label>Sell (<span style='font-family:Arial;'>&#8377;</span>)</label><br>
+                        <input onChange="equity();" id="intra_sell" class="box" type="number" min="0" name="intra_sell" value="600">
+                    </center>
+                </div>
+                <div class="columns">
+                    <center>
+                        <label>Quantity</label><br>
+                        <input onChange="equity();" id="intra_qty" class="box" type="number" min="0" name="intra_qty" value="100">
+                    </center>
+                </div>
+            </div>
+            <div style="height:70px" class="B">
+                <div style="width:50%" class="columns">
+                    <center>
+                        <input onChange="equity();" id="radio11" type="radio" name="nbse1" value="NSE" class="nbse" checked>
+                        <label for="radio11">NSE</label>
+                    </center>
+                </div>
+                <div style="width:50%" class="columns">
+                    <center>
+                        <input onChange="equity();" id="radio11" type="radio" name="nbse1" value="BSE" class="nbse">
+                        <label for="radio11">BSE</label>
+                    </center>
+                </div>
+            </div>
+            <div style="height:70px" class="B">
+                <div style="width:40%; padding:0" class="columns">
+                    <div class="sec">
+                        <p style="padding-left:30px; text-align:left;">State</p>
+                    </div>
+                </div>
+                <div style="width:60%">
+                    <select onChange="equity();" style="padding-right:30px; width:80%" id="state_intra" class="box drop intra_state" name="test">
+                <option selected>Andhra Pradesh</option>
+                    </select>
+                </div>
+            </div>
+            <div style="background-color: #efeff2;" class="C">
+                <div class="sec">
+                    <p style="padding-left:30px; text-align:left;"><b>Turnover</b></p>
+                </div>
+                <div class="sec">
+                    <b><p style="padding-right:30px; text-align:right;" id="intra_to">110,000</p></b>
+                </div>
+            </div>
+            <div class="C">
+                <div class="sec">
+                    <p style="padding-left:30px; text-align:left;">Brokerage</p>
+                </div>
+                <div class="sec">
+                    <p style="padding-right:30px; text-align:right;" id="intra_brokerage" max="40">11.00</p>
+                </div>
+            </div>
+            <div class="C">
+                <div class="sec">
+                    <p style="padding-left:30px; text-align:left;">STT</p>
+                </div>
+                <div class="sec">
+                    <p style="padding-right:30px; text-align:right;" id="intra_stt">15.00</p>
+                </div>
+            </div>
+            <div class="C">
+                <div class="sec">
+                    <p style="padding-left:30px; text-align:left;">Transac. Charges</p>
+                </div>
+                <div class="sec">
+                    <p style="padding-right:30px; text-align:right;" id="intra_tc">3.58</p>
+                </div>
+            </div>
+            <div class="C">
+                <div class="sec">
+                    <p style="padding-left:30px; text-align:left;">Service tax</p>
+                </div>
+                <div class="sec">
+                    <p style="padding-right:30px; text-align:right;" id="intra_serv">2.18</p>
+                </div>
+            </div>
+            <div class="C">
+                <div class="sec">
+                    <p style="padding-left:30px; text-align:left;">SEBI charges</p>
+                </div>
+                <div class="sec">
+                    <p style="padding-right:30px; text-align:right;" id="intra_sebi">0.22</p>
+                </div>
+            </div>
+            <div class="C">
+                <div class="sec">
+                    <p style="padding-left:30px; text-align:left;">DP charges</p>
+                </div>
+                <div class="sec">
+                    <p style="padding-right:30px; text-align:right;" id='dp_char' >0.00</p>
+                </div>
+            </div>
+            <div class="C">
+                <div class="sec">
+                    <p style="padding-left:30px; text-align:left;">Stamp charges</p>
+                </div>
+                <div class="sec">
+                    <p style="padding-right:30px; text-align:right;" id="intra_stamp">5.5</p>
+                </div>
+            </div>
+            <div style="background-color:#efeff2;" class="C">
+                <div class="sec">
+                    <p style="padding-left:30px; text-align:left;"><b>TOTAL</b></p>
+                </div>
+                <div class="sec">
+                    <b><p style="padding-right:30px; text-align:right;" id="intra_char">50</p></b>
+                </div>
+            </div>
+            <div class="C">
+                <div class="sec">
+                    <p style="padding-left:30px; text-align:left;">Breakeven Point</p>
+                </div>
+                <div class="sec">
+                    <p style="padding-right:30px; text-align:right;" id="intra_break">0.50</p>
+                </div>
+            </div>
+            <div style="font-size:20px; height:62.5px; border-bottom:0" class="C">
+                <div class="sec">
+                    <b><p style="text-align:left"><div style="color:green; padding-left:30px" id="pltext">Net Profit</div></p></b>
+                </div>
+                <div class="sec">
+                    <b><p style="text-align:right"><div style="color:green; padding-right:30px" id="plnum">9950</div></p></b>
+                </div>
+            </div>
+            <div style="height:54px; border-bottom:0" class="C">
+                <div class="sec">
+                    <div>
+                        <center style="padding:10px" id="statement">You're being charged <span style='font-family:Arial;'>&#8377;</span>50 on <span style='font-family:Arial;'>&#8377;</span>110,000 amount of transaction.</center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- - - - - - - - - - - - - - - - Second - - - - - - - - - - - - -->
+    
+    </div>
+    <!-- middle content ends -->
+
+    <!-- Footer starts here -->
+
+    <div class="foot">
+        <div><center>Fully Designed & Coded by <a class="one" target="_blank" href="http://sowmayjain.com">Sowmayjain</a></center></div>
+    </div>
+
+     <!-- Footer ends  -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="equity_charges.js"></script>
+
+</body>
+
+</html>
